@@ -9,7 +9,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
+  //array = [total, string]
 
+  var output = [];
+  var total = a + b;
+
+  output.push(total);
+
+  output.push(`The sume of ${a} + ${b} is ${total}.` );
+
+  return output;
 }
 
 // Here is the test for sum(); uncomment it to run it
