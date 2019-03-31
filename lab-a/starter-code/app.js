@@ -102,7 +102,7 @@ function sumArray(sumArr) { //eslint-disable-line
     result += sumArr[i];
   }
 
-  const message = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and 9 is their sum.`;
+  const message = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${result} is their sum.`;
 
   output.push(result, message);
 
@@ -128,12 +128,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
   let output = [];
-  let result = 0;
+  let result = 1;
   for(let i = 0; i < multArr.length; i++) {
     result *= multArr[i];
   }
 
-  const message = `${multArr[0]},${multArr[1]},${multArr[2]} was passed in as an array of numbers, and 9 is their sum.`;
+  const message = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${result}.`;
 
   output.push(result, message);
 
