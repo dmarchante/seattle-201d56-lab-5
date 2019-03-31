@@ -93,16 +93,15 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2, 3, 4]; //eslint-disable-line
+const testArray = [2, 3, 4]; //eslint-disable-line
+const sumReducer = (a, b) => a + b;
+const multReducer = (a, b) => a * b;
+
 
 function sumArray(sumArr) { //eslint-disable-line
   let output = [];
-  let result = 0;
-  for(let i = 0; i < sumArr.length; i++) {
-    result += sumArr[i];
-  }
-
-  const message = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${result} is their sum.`;
+  const result = sumArr.reduce(sumReducer);
+  const message = `${sumArr.join(',')} was passed in as an array of numbers, and ${result} is their sum.`;
 
   output.push(result, message);
 
@@ -128,12 +127,9 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
   let output = [];
-  let result = 1;
-  for(let i = 0; i < multArr.length; i++) {
-    result *= multArr[i];
-  }
+  let result = multArr.reduce(multReducer);
 
-  const message = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${result}.`;
+  const message = `The numbers ${multArr.join(',')} have a product of ${result}.`;
 
   output.push(result, message);
 
@@ -165,10 +161,17 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+  let output = [];
+  let result = dynamicArray.reduce(multReducer);
 
+  const message = `The numbers ${dynamicArray.join(',')} have a product of ${result}.`;
+
+  output.push(result, message);
+
+  return output;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray); //eslint-disable-line
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
