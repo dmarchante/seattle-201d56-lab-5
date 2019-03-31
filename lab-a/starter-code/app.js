@@ -9,13 +9,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-  //array = [total, string]
-
   var output = [];
   var total = a + b;
-  var answer = `The sume of ${a} + ${b} is ${total}.` ;
+  var message = `The sum of ${a} and ${b} is ${total}.` ;
 
-  output.push(total, answer);
+  output.push(total, message);
 
   return output;
 }
@@ -38,7 +36,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) { //eslint-disable-line
   let output = [];
   let product = a * b;
-  let message = `The product of ${a} and ${b} is ${product}.`
+  let message = `The product of ${a} and ${b} is ${product}.`;
 
   output.push(product, message);
 
