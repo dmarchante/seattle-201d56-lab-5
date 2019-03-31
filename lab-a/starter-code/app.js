@@ -94,15 +94,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
+const sumReducer = (a, b) => a + b;
+const multReducer = (a, b) => a * b;
+
 
 function sumArray(sumArr) { //eslint-disable-line
   let output = [];
-  let result = 0;
-  for(let i = 0; i < sumArr.length; i++) {
-    result += sumArr[i];
-  }
-
+  const result = sumArr.reduce(sumReducer);
   const message = `${sumArr.join(',')} was passed in as an array of numbers, and ${result} is their sum.`;
+
+  // These comments are to show the original version using a loop, before implementing the reduce method
+  // for(let i = 0; i < multArr.length; i++) {
+  //   result += multArr[i];
+  // }
 
   output.push(result, message);
 
@@ -128,12 +132,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
   let output = [];
-  let result = 1;
-  for(let i = 0; i < multArr.length; i++) {
-    result *= multArr[i];
-  }
-
+  let result = multArr.reduce(multReducer);
   const message = `The numbers ${multArr.join(',')} have a product of ${result}.`;
+
+  // These comments are to show the original version using a loop, before implementing the reduce method
+  // for(let i = 0; i < multArr.length; i++) {
+  //   result *= multArr[i];
+  // }
 
   output.push(result, message);
 
@@ -166,12 +171,13 @@ var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   let output = [];
-  let result = 1;
-  for(let i = 0; i < dynamicArray.length; i++) {
-    result *= dynamicArray[i];
-  }
-
+  let result = dynamicArray.reduce(multReducer);
   const message = `The numbers ${dynamicArray.join(',')} have a product of ${result}.`;
+
+  // These comments are to show the original version using a loop, before implementing the reduce method
+  // for(let i = 0; i < multArr.length; i++) {
+  //   result *= multArr[i];
+  // }
 
   output.push(result, message);
 
