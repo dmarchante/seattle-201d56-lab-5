@@ -103,6 +103,11 @@ function sumArray(sumArr) { //eslint-disable-line
   const result = sumArr.reduce(sumReducer);
   const message = `${sumArr.join(',')} was passed in as an array of numbers, and ${result} is their sum.`;
 
+  // These comments are to show the original version using a loop, before implementing the reduce method
+  // for(let i = 0; i < multArr.length; i++) {
+  //   result += multArr[i];
+  // }
+
   output.push(result, message);
 
   return output;
@@ -128,8 +133,12 @@ Test this function by hand in the console to get it working, and when you think 
 function multiplyArray(multArr) { //eslint-disable-line
   let output = [];
   let result = multArr.reduce(multReducer);
-
   const message = `The numbers ${multArr.join(',')} have a product of ${result}.`;
+
+  // These comments are to show the original version using a loop, before implementing the reduce method
+  // for(let i = 0; i < multArr.length; i++) {
+  //   result *= multArr[i];
+  // }
 
   output.push(result, message);
 
@@ -163,8 +172,12 @@ var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   let output = [];
   let result = dynamicArray.reduce(multReducer);
-
   const message = `The numbers ${dynamicArray.join(',')} have a product of ${result}.`;
+
+  // These comments are to show the original version using a loop, before implementing the reduce method
+  // for(let i = 0; i < multArr.length; i++) {
+  //   result *= multArr[i];
+  // }
 
   output.push(result, message);
 
