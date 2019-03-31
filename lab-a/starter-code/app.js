@@ -13,7 +13,7 @@ function sum(a, b) { //eslint-disable-line
 
   var output = [];
   var total = a + b;
-  var answer = `The sume of ${a} + ${b} is ${total}.` ;
+  var answer = `The sum of ${a} + ${b} is ${total}.` ;
 
   output.push(total, answer);
 
